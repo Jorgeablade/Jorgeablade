@@ -10,6 +10,7 @@ con = pypyodbc.connect(**dbconfig)
 # El cursor en python nos permite interactuar con la db y ejecutar comandos sin necesidad de ser en la consola de la db, muy importante para realizar operaciones
 cursor = con.cursor() 
 
+# Creo una clase para poder llamarla cada vez que quiera realizar un cambio
 class Bookdb:
     def __init__(self):
         self.con = pypyodbc.connect(**dbconfig)
